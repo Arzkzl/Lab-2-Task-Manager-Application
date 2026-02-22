@@ -123,6 +123,9 @@ fun TaskInputField(
 }
 
 @Composable
+//I used mutableList because I modify the list here.
+//I could also use a key in LazyColumn ,but I started with this and then improved the update logic
+//when checkbox changes needed to refresh the UI.
 fun TaskList(taskList: MutableList<Task>) {
     //creates a scrollable list.
     LazyColumn {
